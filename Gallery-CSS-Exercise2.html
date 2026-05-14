@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <style>
+      filter button {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 20px ;
+        flex-wrap: wrap;
+      }
+      button {
+        padding: 10px 20px;
+        border: none;
+        background: #eee;
+        cursor: pointer;
+      }
+      button.active {
+        background: #333;
+        color: white;
+      }
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+      .card {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        position: relative;
+        border: 1px solid #ccc;
+        overflow: hidden;
+      }
+      .card img {
+        width: 100%;
+        display: block;
+      }
+      .card h3 {
+        margin: 10px;
+      }
+      .card.category {
+        margin: 0 10px 10px;
+        font-family: Arial, sans-serif;
+        font-size: 0.9em;
+        color: #666;
+      }
+      .overlay {
+        position: absolute;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        width: 100%;
+        opacity: 0;
+        padding: 10px;
+        transition:
+          opacity 0,
+          3s ease;
+      }
+      .card:hover.overlay {
+        opacity: 1;
+      }
+      @media (max-width: 1024px) {
+        .gallery {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 600px) {
+        .gallery {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="filter button">
+      <button class="active">Landscapes</button>
+      <button class="active">Potraits</button>
+      <button class="active">Architecture</button>
+    </div>
+    <div class="gallery">
+      <div class="card landscape">
+        <img
+          src="c:\Users\Trainee\Pictures\Landscapes\beautiful-autumn-landscape-yellow-trees-260nw-1182854209.webp"
+        />
+        <h3>Beautiful Autum Yellow Trees</h3>
+        <span class="category">Landscapes </span>
+        <div class="overlay">Beautiful Tress Scenery</div>
+      </div>
+    </div>
+    <div class="gallery">
+      <div class="card potraits">
+        <img
+          src="https://png.pngtree.com/thumb_back/fh260/background/20250120/pngtree-natural-beauty-of-spring-image_16873833.jpg"
+        />
+        <h3>Natural beauty of spring</h3>
+        <span class="category">Potraits </span>
+        <div class="overlay">Natural beaty of spring</div>
+      </div>
+    </div>
+    <div class="gallery">
+      <div class="card architecture">
+        <img
+          src="https://media.architecturaldigest.com/photos/55e76598302ba71f301653ad/master/w_1024%2Cc_limit/dam-images-architecture-2015-02-web-toc-snow-famous-architecture-in-winter-02-great-wall-of-china.jpg"
+        />
+        <h3>Snow Famous architecture in winter</h3>
+        <span class="category">Architecture </span>
+        <div class="overlay">The greate wall of China</div>
+      </div>
+    
+    
+      <div class="card landscape">
+        <img
+          src="https://getwallpapers.com/wallpaper/full/7/f/c/1088041-full-size-autumn-landscape-wallpaper-1920x1080-for-windows-7.jpg"
+        />
+        <h3>Beautiful full size Autum landscape</h3>
+        <span class="category">Landscapes </span>
+        <div class="overlay">Beautiful Tress Scenery</div>
+      </div>
+    </div>
+    
+      <div class="card potraits">
+        <img
+          src="https://m.media-amazon.com/images/I/81xYLjXT0nL._AC_UF1000,1000_QL80_.jpg"
+        />
+        <h3>Natural beauty of spring</h3>
+        <span class="category">Potraits </span>
+        <div class="overlay">Natural beaty of spring</div>
+      </div>
+    </div>
+    
+      <div class="card architecture">
+        <img
+          src="https://media.architecturaldigest.com/photos/55e76599302ba71f301653b4/master/w_1024%2Cc_limit/dam-images-architecture-2015-02-web-toc-snow-famous-architecture-in-winter-03-fallingwater.jpg"
+        />
+        <h3>Snow Famous architecture in winter</h3>
+        <span class="category">Architecture </span>
+        <div class="overlay">Falling water</div>
+      </div>
+    </div>
+    
+      <div class="card landscape">
+        <img
+          src="https://www.shutterstock.com/image-photo/beautiful-autumn-landscape-yellow-trees-260nw-1182854209.jpg"
+        />
+        <h3>Beautiful full size Autum landscape</h3>
+        <span class="category">Landscapes </span>
+        <div class="overlay">Beautiful Tress Scenery</div>
+      </div>
+    </div>
+    
+      <div class="card potraits">
+        <img
+          src="https://m.media-amazon.com/images/I/81JmrLR6ckL._AC_UF1000,1000_QL80_.jpg"
+        />
+        <h3>Natural beauty of spring</h3>
+        <span class="category">Potraits </span>
+        <div class="overlay">Natural beaty of spring</div>
+      </div>
+    </div>
+    
+      <div class="card architecture">
+        <img
+          src="https://media.istockphoto.com/id/2172489777/photo/dramatic-wintry-scene-with-snowy-trees.jpg?s=612x612&w=0&k=20&c=lrlnNY1cCfsu-frlhbv_gDj1v0rcbtl1sOy3LCC-JIg="
+        />
+        <h3>Dramatic winter scenery with snowy trees</h3>
+        <span class="category">Architecture </span>
+        <div class="overlay">Dramatic winter scenery with snowy trees</div>
+      </div>
+    </div>
+    
+    <div class="card landscape">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMcIHgzL_6sFeS8VuPsq5XATJpQ4rh7HFYVw&s"
+        />
+      <div class="overlay"></div>
+        <h3>Beautiful Autum Yellow Trees</h3>
+        <span class="category">Landscapes </span>
+        <p>Beautiful Tress Scenery</p>
+      </div>
+    </div>
+    
+      <div class="card potraits">
+        <img
+          src="https://wallpapers.com/images/hd/spring-nature-pictures-u5l4avu2a3n5xhp4.jpg"
+        />
+        <h3>Natural beauty of spring</h3>
+        <span class="category">Potraits </span>
+        <div class="overlay">Natural beaty of spring</div>
+      </div>
+    </div>
+    
+      <div class="card architecture">
+        <img
+          src="https://archicgi.com/wp-content/uploads/2023/12/winter-3d-rendering-colorado-mansion.jpg "
+        />
+        <h3>Dramatic winter scenery with snowy trees</h3>
+        <span class="category">Architecture </span>
+        <div class="overlay">Dramatic winter scenery with snowy trees</div>
+      </div>
+    </div>
+  </body>
+</html>
